@@ -40,11 +40,8 @@ app.on('ready', function () {
         height: 600
     });
 
-    mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'app.html'),
-        protocol: 'file:',
-        slashes: true
-    }));
+    const serviceWorkerBasicSampleURL = 'https://googlechrome.github.io/samples/service-worker/registration/index.html';
+    mainWindow.loadURL(serviceWorkerBasicSampleURL);
 
     if (env.name === 'development') {
         mainWindow.openDevTools();
